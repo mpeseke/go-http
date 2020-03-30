@@ -7,7 +7,11 @@ import (
 )
 
 func main() {
-	resp, err := http.Get("https://pokeapi.co/api/v2/pokemon/25/")
+	searchMonster("25")
+}
+
+func searchMonster(number string) {
+	resp, err := http.Get("https://pokeapi.co/api/v2/pokemon/" + number + "/")
 	if err != nil {
 		panic(err)
 	}
