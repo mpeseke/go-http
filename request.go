@@ -6,8 +6,20 @@ import (
 	"net/http"
 )
 
+
+
+
 func main() {
-	searchMonster("25")
+
+
+}
+
+func inputControl() int {
+	var number int
+	fmt.Println("What Pokemon number would you like to search for?")
+	fmt.Scan(&number)
+
+	return number
 }
 
 func searchMonster(number string) {
