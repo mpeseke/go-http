@@ -7,11 +7,15 @@ import (
 )
 
 
+type Pokemon struct {
+	number int
+	name string
+}
 
 
 func main() {
-
-
+	pikachu := Pokemon{number: 25, name: "Pikachu"}
+	fmt.Println(pikachu)
 }
 
 func inputControl() int {
