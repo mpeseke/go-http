@@ -6,24 +6,21 @@ import (
 	"net/http"
 )
 
-
 type Pokemon struct {
 	number int
-	name string
+	name   string
 }
-
 
 func main() {
-	pikachu := Pokemon{number: 25, name: "Pikachu"}
-	fmt.Println(pikachu)
+	inputControl()
 }
 
-func inputControl() int {
-	var number int
+func inputControl() {
+	var number string
 	fmt.Println("What Pokemon number would you like to search for?")
 	fmt.Scan(&number)
 
-	return number
+	searchMonster(number)
 }
 
 func searchMonster(number string) {
